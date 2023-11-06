@@ -25,7 +25,8 @@ function createGrid() {
   // check if size of grid is permitted
 
   if (rowsInt <= 0 || rowsInt > 100 || columnsInt <= 0 || columnsInt > 100) {
-    alert("Size of grid should be between 1 and 100")
+    alert("Size of grid should be between 1 and 100");
+    return
   }
 
   // create grid logic
