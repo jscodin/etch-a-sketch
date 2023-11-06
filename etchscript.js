@@ -29,15 +29,22 @@ function createGrid() {
   }
 
   // create grid logic
+  //
+  // clear the grid before generating the new one
+  const container = document.querySelector('#container');
+  container.textContent = "";
 
+  // this creates the grids dynamically using the user input
 
+  container.style.gridTemplateRows = `repeat(${rowsInt}, 1fr)`;
+  container.style.gridTemplateColumns = `repeat(${columnsInt}, 1fr)`;
 
+  for (let i = 0; i < rowsInt * columnsInt; i++) {
+    const cell = document.createElement('div');
+    cell.classList.add('cell');
+    container.appendChild(cell);
 
-
-
-
-
-
+  }
 
 }
 

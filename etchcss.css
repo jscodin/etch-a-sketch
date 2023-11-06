@@ -1,8 +1,6 @@
 #container {
   display: grid;
-  /* grid-auto-row: 1fr; */
-  /* grid-auto-column: 1fr; */
-  padding: 5px;
+  padding: 15px;
   width: 40px;
   height: 40px;
 }
@@ -17,8 +15,13 @@ h1 {
   text-align: center;
 }
 
-.sq1 {
-  border: 3px solid blue;
+div {
+  margin: auto;
+  justify-content: center;
+ } 
+
+.cell {
+  border: 1px solid grey;
   padding: 40px;
 }
 
