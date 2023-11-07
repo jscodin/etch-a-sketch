@@ -26,17 +26,17 @@ function createGrid() {
   }
 
   // clear the grid before generating the new one
-  const container = document.querySelector('#container');
-  container.textContent = "";
+  const grid = document.querySelector('.grid');
+  grid.textContent = "";
 
   // this creates the grids dynamically using the user input
-  container.style.gridTemplateRows = `repeat(${rowsInt}, 1fr)`;
-  container.style.gridTemplateColumns = `repeat(${columnsInt}, 1fr)`;
+  grid.style.gridTemplateRows = `repeat(${rowsInt}, minmax(0px, 1fr)`;
+  grid.style.gridTemplateColumns = `repeat(${columnsInt}, minmax(0px, 1fr)`;
 
   for (let i = 0; i < rowsInt * columnsInt; i++) {
     const cell = document.createElement('div');
     cell.classList.add('cell');
-    container.appendChild(cell);
+    grid.appendChild(cell);
 
   }
 
