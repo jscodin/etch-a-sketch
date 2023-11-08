@@ -1,6 +1,3 @@
-#container {
-}
-
 .grid {
   display: grid;
   width: 700px;
@@ -27,8 +24,3 @@
 h1 {
   text-align: center;
 }
-
-div {
- } 
-
-

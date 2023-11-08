@@ -36,13 +36,26 @@ function createGrid() {
   for (let i = 0; i < rowsInt * columnsInt; i++) {
     const cell = document.createElement('div');
     cell.classList.add('cell');
+    cell.addEventListener('mouseover', (event) => {
+      event.target.style.backgroundColor = 'blue';
+    });
     grid.appendChild(cell);
 
   }
+
+  // for (c in cell)
+  // let color = document.querySelector('.cell');
+  // color.addEventListener('mouseover', () => {
+  //   color.style.backgroundColor = 'blue';
+  // })
+
+
+
 
 }
 
 const btn = document.querySelector(".btn");
 btn.addEventListener('click', createGrid);
+
 
 
