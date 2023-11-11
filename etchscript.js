@@ -33,23 +33,47 @@ function createGrid() {
   grid.style.gridTemplateRows = `repeat(${rowsInt}, minmax(0px, 1fr)`;
   grid.style.gridTemplateColumns = `repeat(${columnsInt}, minmax(0px, 1fr)`;
 
+  // changes the color and brightness of squares
   for (let i = 0; i < rowsInt * columnsInt; i++) {
     const cell = document.createElement('div');
     cell.classList.add('cell');
-    cell.addEventListener('mouseover', (event) => {
-      event.target.style.backgroundColor = 'blue';
+    cell.addEventListener('mouseover', function() {
+      (event) => {
+        event.target.style.backgroundColor = randCol();
+      };
+      console.log(randCol());
+      darkenSquare();
+
     });
+    // cell.addEventListener('mouseover', (randCol));
     grid.appendChild(cell);
 
   }
 
-  // for (c in cell)
-  // let color = document.querySelector('.cell');
-  // color.addEventListener('mouseover', () => {
-  //   color.style.backgroundColor = 'blue';
-  // })
+  // chooses random hex colour
+  function randCol() {
 
+    let hexCode = "#";
+    let hexString = "123456789abcdef";
 
+    for (let i = 0; i < 6; i++) {
+      hexCode += hexString[Math.floor(Math.random() * hexString.length)];
+
+    }
+
+    return hexCode;
+
+  }
+
+  //   const darkenSquare = () => {
+  //     let currentBrightness = square.dataset.brightness || 100;
+  //     currentBrightness = parseInt(currentBrightness) - 10;
+  //
+  //     if (currentBrightness >= 0) {
+  //         square.style.filter = `brightness(${currentBrightness}%)`;
+  //         square.dataset.brightness = currentBrightness;
+  //     }
+  // };
 
 
 }
